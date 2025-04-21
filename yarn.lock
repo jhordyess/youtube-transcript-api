@@ -2033,6 +2033,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"http-status-codes@npm:^2.3.0":
+  version: 2.3.0
+  resolution: "http-status-codes@npm:2.3.0"
+  checksum: 10c0/c2412188929e8eed6623eef468c62d0c3c082919c03e9b74fd79cfd060d11783dba44603e38a3cee52d26563fe32005913eaf6120aa8ba907da1238f3eaad5fe
+  languageName: node
+  linkType: hard
+
 "https-proxy-agent@npm:^7.0.1":
   version: 7.0.6
   resolution: "https-proxy-agent@npm:7.0.6"
@@ -3943,6 +3950,7 @@ __metadata:
     eslint: "npm:^9.25.1"
     express: "npm:^5.1.0"
     globals: "npm:^16.0.0"
+    http-status-codes: "npm:^2.3.0"
     husky: "npm:^9.1.7"
     morgan: "npm:^1.10.0"
     nodemon-webpack-plugin: "npm:^4.8.2"
