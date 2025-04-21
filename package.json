@@ -1,7 +1,16 @@
 {
-  "name": "express-ts-webpack-starter",
+  "name": "youtube-transcript-server",
+  "description": "A simple server to get youtube video transcripts.",
+  "version": "1.0.0",
+  "author": "Jhordy Gavinchu <dev@jhordyess.com>",
+  "keywords": [
+    "express",
+    "typescript",
+    "ts-rest",
+    "youtube"
+  ],
+  "license": "MIT",
   "private": true,
-  "version": "0.0.0",
   "type": "module",
   "packageManager": "yarn@4.9.1",
   "devDependencies": {
