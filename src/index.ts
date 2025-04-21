@@ -17,7 +17,9 @@ app.use(express.json())
 
 // Homepage
 app.get('/', (_, res) => {
-  res.send('Hello, visit /docs for API documentation')
+  res.send(
+    'Hello, visit /docs for API documentation using Swagger UI, or /docs/json for OpenAPI JSON.'
+  )
 })
 
 // Health check
