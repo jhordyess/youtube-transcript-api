@@ -5,6 +5,18 @@ __metadata:
   version: 8
   cacheKey: 10c0
 
+"@anatine/zod-openapi@npm:^1.12.0":
+  version: 1.14.2
+  resolution: "@anatine/zod-openapi@npm:1.14.2"
+  dependencies:
+    ts-deepmerge: "npm:^6.0.3"
+  peerDependencies:
+    openapi3-ts: ^2.0.0 || ^3.0.0
+    zod: ^3.20.0
+  checksum: 10c0/fbcd26be3528cb884c78fc3a60443ee2c59fd9a21adf93065ba68a653433a339f6200f8ea5453371a95d7cef4150ecbe7d581c45b0ff5bfb45b9d4a7c82c4dff
+  languageName: node
+  linkType: hard
+
 "@discoveryjs/json-ext@npm:^0.6.1":
   version: 0.6.3
   resolution: "@discoveryjs/json-ext@npm:0.6.3"
@@ -267,6 +279,55 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@scarf/scarf@npm:=1.4.0":
+  version: 1.4.0
+  resolution: "@scarf/scarf@npm:1.4.0"
+  checksum: 10c0/332118bb488e7a70eaad068fb1a33f016d30442fb0498b37a80cb425c1e741853a5de1a04dce03526ed6265481ecf744aa6e13f072178d19e6b94b19f623ae1c
+  languageName: node
+  linkType: hard
+
+"@ts-rest/core@npm:^3.52.1":
+  version: 3.52.1
+  resolution: "@ts-rest/core@npm:3.52.1"
+  peerDependencies:
+    "@types/node": ^18.18.7 || >=20.8.4
+    zod: ^3.22.3
+  peerDependenciesMeta:
+    "@types/node":
+      optional: true
+    zod:
+      optional: true
+  checksum: 10c0/c5c44a02b0ba3e049a4c170b89c63f4be9623d42f363a05fa9874a77b44d9103e3a4892f22eb9c6c5f7e1165549faec914bad85ab6e51011ebc446cdfa1ddc7f
+  languageName: node
+  linkType: hard
+
+"@ts-rest/express@npm:^3.52.1":
+  version: 3.52.1
+  resolution: "@ts-rest/express@npm:3.52.1"
+  peerDependencies:
+    "@ts-rest/core": ~3.52.0
+    express: ^4.0.0
+    zod: ^3.22.3
+  peerDependenciesMeta:
+    zod:
+      optional: true
+  checksum: 10c0/9d80ae9047b976acfe281817215f2e577cc7406455974c768b63f137f040d2fb736f402b946335fe481d9edf1c000fe94f539960b30e8cf75e18456d4508ea7e
+  languageName: node
+  linkType: hard
+
+"@ts-rest/open-api@npm:^3.52.1":
+  version: 3.52.1
+  resolution: "@ts-rest/open-api@npm:3.52.1"
+  dependencies:
+    "@anatine/zod-openapi": "npm:^1.12.0"
+    openapi3-ts: "npm:^2.0.2"
+  peerDependencies:
+    "@ts-rest/core": ~3.52.0
+    zod: ^3.22.3
+  checksum: 10c0/0f07af29e73f4fedc8eb33f5b2d74db650ea7fc1f89776fa8b8ea7058fcc3f02e6222eef694cfdc25b93871801d5fe502ef3ac61809df3dcf813ce1112eeedc6
+  languageName: node
+  linkType: hard
+
 "@types/body-parser@npm:*":
   version: 1.19.5
   resolution: "@types/body-parser@npm:1.19.5"
@@ -334,7 +395,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/express@npm:^5.0.1":
+"@types/express@npm:*, @types/express@npm:^5.0.1":
   version: 5.0.1
   resolution: "@types/express@npm:5.0.1"
   dependencies:
@@ -425,6 +486,16 @@ __metadata:
     "@types/node": "npm:*"
     "@types/send": "npm:*"
   checksum: 10c0/26ec864d3a626ea627f8b09c122b623499d2221bbf2f470127f4c9ebfe92bd8a6bb5157001372d4c4bd0dd37a1691620217d9dc4df5aa8f779f3fd996b1c60ae
+  languageName: node
+  linkType: hard
+
+"@types/swagger-ui-express@npm:^4.1.8":
+  version: 4.1.8
+  resolution: "@types/swagger-ui-express@npm:4.1.8"
+  dependencies:
+    "@types/express": "npm:*"
+    "@types/serve-static": "npm:*"
+  checksum: 10c0/9c9e8327c40376b98b6fbd5dd2d722b7b5473e5c168af809431f16b34c948d2d3d44ce2157d2066355e9926ba86416481a30cd1cbcdbb064dd2fedb28442a85a
   languageName: node
   linkType: hard
 
@@ -1562,10 +1633,14 @@ __metadata:
   resolution: "express-ts-webpack-starter@workspace:."
   dependencies:
     "@eslint/js": "npm:^9.25.1"
+    "@ts-rest/core": "npm:^3.52.1"
+    "@ts-rest/express": "npm:^3.52.1"
+    "@ts-rest/open-api": "npm:^3.52.1"
     "@types/cors": "npm:^2.8.17"
     "@types/express": "npm:^5.0.1"
     "@types/morgan": "npm:^1.9.9"
     "@types/node": "npm:^22.14.1"
+    "@types/swagger-ui-express": "npm:^4.1.8"
     "@types/webpack-node-externals": "npm:^3.0.4"
     cors: "npm:^2.8.5"
     dotenv-webpack: "npm:^8.1.0"
@@ -1576,12 +1651,15 @@ __metadata:
     morgan: "npm:^1.10.0"
     nodemon-webpack-plugin: "npm:^4.8.2"
     prettier: "npm:^3.5.3"
+    swagger-ui-express: "npm:^5.0.1"
     ts-loader: "npm:^9.5.2"
     typescript: "npm:^5.8.3"
     typescript-eslint: "npm:^8.31.0"
     webpack: "npm:^5.99.6"
     webpack-cli: "npm:^6.0.1"
     webpack-node-externals: "npm:^3.0.0"
+    youtube-transcript: "npm:^1.2.1"
+    zod: "npm:^3.24.3"
   languageName: unknown
   linkType: soft
 
@@ -2711,6 +2789,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"openapi3-ts@npm:^2.0.2":
+  version: 2.0.2
+  resolution: "openapi3-ts@npm:2.0.2"
+  dependencies:
+    yaml: "npm:^1.10.2"
+  checksum: 10c0/2886a85a28d513ef177d069a85293f47e1bb8ba1c9c953f15de064a119f759d6b42b7eb89ed8db0c7d277904fecb65f28a2f4300ebe424f825682b689d2dc810
+  languageName: node
+  linkType: hard
+
 "optionator@npm:^0.9.3":
   version: 0.9.4
   resolution: "optionator@npm:0.9.4"
@@ -3411,6 +3498,26 @@ __metadata:
   languageName: node
   linkType: hard
 
+"swagger-ui-dist@npm:>=5.0.0":
+  version: 5.21.0
+  resolution: "swagger-ui-dist@npm:5.21.0"
+  dependencies:
+    "@scarf/scarf": "npm:=1.4.0"
+  checksum: 10c0/fed58b709cc956f5965cc3e2c522898365ecd43f5bb942252d7352e52039ef7b2106b915165295114009ce7e1b64c2b2cb97edf93e3f2a44adfed70bb8a4fac8
+  languageName: node
+  linkType: hard
+
+"swagger-ui-express@npm:^5.0.1":
+  version: 5.0.1
+  resolution: "swagger-ui-express@npm:5.0.1"
+  dependencies:
+    swagger-ui-dist: "npm:>=5.0.0"
+  peerDependencies:
+    express: ">=4.0.0 || >=5.0.0-beta"
+  checksum: 10c0/dbe9830caef7fe455241e44e74958bac62642997e4341c1b0f38a3d684d19a4a81b431217c656792d99f046a1b5f261abf7783ede0afe41098cd4450401f6fd1
+  languageName: node
+  linkType: hard
+
 "tapable@npm:^2.1.1, tapable@npm:^2.2.0":
   version: 2.2.1
   resolution: "tapable@npm:2.2.1"
@@ -3509,6 +3616,13 @@ __metadata:
   peerDependencies:
     typescript: ">=4.8.4"
   checksum: 10c0/9806a38adea2db0f6aa217ccc6bc9c391ddba338a9fe3080676d0d50ed806d305bb90e8cef0276e793d28c8a929f400abb184ddd7ff83a416959c0f4d2ce754f
+  languageName: node
+  linkType: hard
+
+"ts-deepmerge@npm:^6.0.3":
+  version: 6.2.1
+  resolution: "ts-deepmerge@npm:6.2.1"
+  checksum: 10c0/b73bc0a0530b26b3969f994483abbb33a8514a9b345e7095cf2add5242cd1fe388c1007c4989e2d8b193fe608f9d7a443025a635fd4331bd0ceb76c73f748adf
   languageName: node
   linkType: hard
 
@@ -3831,9 +3945,30 @@ __metadata:
   languageName: node
   linkType: hard
 
+"yaml@npm:^1.10.2":
+  version: 1.10.2
+  resolution: "yaml@npm:1.10.2"
+  checksum: 10c0/5c28b9eb7adc46544f28d9a8d20c5b3cb1215a886609a2fd41f51628d8aaa5878ccd628b755dbcd29f6bb4921bd04ffbc6dcc370689bb96e594e2f9813d2605f
+  languageName: node
+  linkType: hard
+
 "yocto-queue@npm:^0.1.0":
   version: 0.1.0
   resolution: "yocto-queue@npm:0.1.0"
   checksum: 10c0/dceb44c28578b31641e13695d200d34ec4ab3966a5729814d5445b194933c096b7ced71494ce53a0e8820685d1d010df8b2422e5bf2cdea7e469d97ffbea306f
+  languageName: node
+  linkType: hard
+
+"youtube-transcript@npm:^1.2.1":
+  version: 1.2.1
+  resolution: "youtube-transcript@npm:1.2.1"
+  checksum: 10c0/2c030b1d0ac34678533cc1d628bd97709c628d49a2f583330fa2d5e04c8bd49b3644514df315791f7d8512d71c1f9e9292810823d4a0f10e9a605ae325fc89d0
+  languageName: node
+  linkType: hard
+
+"zod@npm:^3.24.3":
+  version: 3.24.3
+  resolution: "zod@npm:3.24.3"
+  checksum: 10c0/ab0369810968d0329a1a141e9418e01e5c9c2a4905cbb7cb7f5a131d6e9487596e1400e21eeff24c4a8ee28dacfa5bd6103893765c055b7a98c2006a5a4fc68d
   languageName: node
   linkType: hard
