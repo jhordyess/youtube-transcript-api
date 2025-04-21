@@ -17,7 +17,7 @@ app.use(express.json())
 
 // Homepage
 app.get('/', (_, res) => {
-  res.send('Hello World!')
+  res.send('Hello, visit /docs for API documentation')
 })
 
 // Health check
