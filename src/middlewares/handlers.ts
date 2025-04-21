@@ -1,7 +1,8 @@
 import type { ErrorRequestHandler, RequestHandler } from 'express'
+import { StatusCodes as SC } from 'http-status-codes'
 
 export const healthCheckHandler: RequestHandler = (_, res) => {
-  res.status(200).send('API is running...')
+  res.status(SC.OK).send('API is running...')
 }
 
 export const errorHandler: ErrorRequestHandler = (err, _, res, next) => {
@@ -9,7 +10,7 @@ export const errorHandler: ErrorRequestHandler = (err, _, res, next) => {
 
   console.error(err)
 
-  const status = 500
+  const status = SC.INTERNAL_SERVER_ERROR
   const error = 'SERVER ERROR'
   const details = undefined
 
@@ -17,5 +18,5 @@ export const errorHandler: ErrorRequestHandler = (err, _, res, next) => {
 }
 
 export const notFoundHandler: RequestHandler = (_, res) => {
-  res.status(404).send('Not found')
+  res.status(SC.NOT_FOUND).send('Not found')
 }
