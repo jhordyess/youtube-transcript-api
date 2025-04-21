@@ -1,7 +1,9 @@
-import { config as dotenvConfig } from 'dotenv'
+const PORT = process.env.NODE_PORT || 3000
 
-dotenvConfig()
+const API_BASE_PATH = '/api/v1'
 
-const port = process.env.NODE_PORT || 3000
+const DEV_HOST = `http://localhost:${PORT}${API_BASE_PATH}`
 
-export { port }
+const PROD_HOST = process.env.API_HOST || DEV_HOST
+
+export { PORT, API_BASE_PATH, DEV_HOST, PROD_HOST }
