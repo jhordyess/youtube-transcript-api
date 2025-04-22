@@ -1,10 +1,10 @@
 import { z } from 'zod'
 import { initContract } from '@ts-rest/core'
+import { StatusCodes } from 'http-status-codes'
 
 const c = initContract()
 
 const PostSchema = z.object({
-  language: z.string(),
   url: z.string(),
   content: z.string()
 })
@@ -12,13 +12,16 @@ const PostSchema = z.object({
 export const transcribeContract = c.router({
   transcribeVideo: {
     method: 'POST',
-    path: '/transcribe',
+    path: '/transcript',
     responses: {
-      200: PostSchema
+      [StatusCodes.OK as number]: PostSchema,
+      [StatusCodes.BAD_REQUEST as number]: z.object({
+        error: z.string()
+      })
     },
     body: z.object({
       videoUrl: z.string()
     }),
-    summary: 'Transcribe YouTube video by videoUrl'
+    summary: 'Obtain a transcript of a YouTube video'
   }
 })
