@@ -1,16 +1,17 @@
-# Express TypeScript Webpack Starter
+# YouTube Transcript API
 
-This is a starter project for building a backend application using Express, TypeScript, and Webpack.
+REST API for fetching YouTube video transcripts.
 
-## Features
+## Description
 
-- **Express**: Fast and minimalist web framework for Node.js. (v. 5)
-- **TypeScript**: Strongly typed JavaScript for better development experience. (v. 5)
-- **Webpack**: Module bundler for compiling and optimizing the code. (v. 5)
-- **ESLint**: Linting for maintaining code quality. (v. 9)
-- **Prettier**: Code formatting for consistent style. (v. 3)
-- **Husky**: Git hooks for enforcing pre-push checks. (v. 9)
-- **Yarn**: Package manager for managing dependencies. (v. 4)
+This project is a REST API with Express, TypeScript and TS-REST for fetching YouTube video transcripts. It allows you to get the transcript of a YouTube video by providing the video ID.
+
+### Technologies Used
+
+- Node modules: [Express](https://expressjs.com/), [Swagger UI](https://swagger.io/tools/swagger-ui/), [TS-REST](https://ts-rest.com/), [youtube-transcript](https://www.npmjs.com/package/youtube-transcript),
+[zod](https://zod.dev/)
+- Programming Language: [TypeScript](https://www.typescriptlang.org/)
+- Build Tool: [Webpack](https://webpack.js.org/)
 
 ## Prerequisites
 
@@ -25,99 +26,45 @@ corepack enable
 
 1. Clone the repository:
 
-```sh
-git clone https://github.com/jhordyess/express-ts-webpack-starter.git
+```bash
+git clone git@github.com:jhordyess/youtube-transcript-api.git
 ```
 
-2. Navigate to the project folder:
+2. Open the project folder:
 
-```sh
-cd express-ts-webpack-starter
+```bash
+cd youtube-transcript-api
 ```
 
-3. Install dependencies:
+3. Create a `.env` file in the root folder by copying the example from the [`.env.example`](./.env.example) file. Replace the values with your own.
 
-```sh
+4. Install the dependencies:
+
+```bash
 yarn install
 ```
 
-4. Start the development server:
+5. Run the project:
 
-```sh
+```bash
 yarn dev
 ```
 
-5. Open your browser or API client and interact with the server running at [http://localhost:3000](http://localhost:3000).
+6. Now you can test the endpoints at <http://localhost:3000>. The API docs (Swagger UI) will be available at <http://localhost:3000/docs>.
 
-## Project Structure
+## To-Do
 
-```md
-fastify-typescript-starter/
-├── .env.example            # Example environment variables file.
-├── .gitignore              # List of files and directories to be ignored by version control.
-├── .prettierrc.json        # Prettier configuration file.
-├── .yarnrc.yml             # Yarn configuration file.
-├── eslint.config.js        # ESLint configuration file.
-├── package.json            # Project configuration and dependencies.
-├── README.md               # Project documentation.
-├── tsconfig.json           # TypeScript configuration file.
-├── webpack.config.js       # Webpack configuration file.
-├── yarn.lock               # Yarn lock file for dependency versions.
-├── .husky/                 # Directory for Git hooks managed by Husky.
-│   ├── pre-push            # Pre-push hook to run linting and TypeScript checks.
-├── src/
-│   ├── index.ts            # Main entry point of the application.
-│   ├── config.ts           # Configuration file for the application.
-```
+- [ ] Add more API endpoints
+- [ ] Improve error handling
 
-## Commands
+## Contribution
 
-### Start the development server
+If you would like to contribute to the project, open an issue or make a pull request on the repository.
 
-```sh
-yarn dev
-```
+## License
 
-### Build the project for production
-
-```sh
-yarn build
-```
-
-### Start the production server
-
-```sh
-yarn start
-```
-
-### Run TypeScript checks
-
-```sh
-yarn ts-check
-```
-
-### Lint the code
-
-```sh
-yarn lint
-```
-
-### Validate the project (lint + TypeScript checks)
-
-```sh
-yarn validate
-```
-
-### Format the code
-
-```sh
-yarn format
-```
-
-## Contributing
-
-Contributions are welcome! If you find any issues or want to enhance the project, feel free to submit a pull request.
+© 2025> [Jhordyess](https://github.com/jhordyess). Under the [MIT](https://choosealicense.com/licenses/mit/) license. See the [LICENSE](./LICENSE) file for more details.
 
 ---
 
-Happy coding!
+Made with 💪 by [Jhordyess](https://www.jhordyess.com/)
