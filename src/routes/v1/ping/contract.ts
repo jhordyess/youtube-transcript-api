@@ -1,5 +1,6 @@
 import { z } from 'zod'
 import { initContract } from '@ts-rest/core'
+import { StatusCodes } from 'http-status-codes'
 
 const c = initContract()
 
@@ -8,7 +9,7 @@ export const pingContract = c.router({
     method: 'GET',
     path: '/ping',
     responses: {
-      200: z.object({
+      [StatusCodes.OK as number]: z.object({
         message: z.string()
       })
     },
