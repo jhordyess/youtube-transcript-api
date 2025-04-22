@@ -1,13 +1,14 @@
 {
-  "name": "youtube-transcript-server",
-  "description": "A simple server to get youtube video transcripts.",
+  "name": "youtube-transcript-api",
+  "description": "A simple API to get YouTube video transcripts",
   "version": "1.0.0",
   "author": "Jhordy Gavinchu <dev@jhordyess.com>",
   "keywords": [
     "express",
     "typescript",
     "ts-rest",
-    "youtube"
+    "youtube",
+    "transcript"
   ],
   "license": "MIT",
   "private": true,
